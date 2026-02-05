@@ -3,7 +3,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.datasets import fetch_california_housing
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -28,7 +27,7 @@ y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-threshold = 5
+threshold = 5.0
 highlight = np.abs(y_pred - y_test) < threshold
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
