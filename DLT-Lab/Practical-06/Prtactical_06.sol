@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.7.4;
+// pragma solidity ^0.7.4;
+pragma solidity ^0.8.4;
 
 contract RestricedAccess {
     address public owner = msg.sender;
@@ -21,7 +22,7 @@ contract RestricedAccess {
         _;
     }
 
-    function forceChangeOwner(address _newOwner) payable public costs(200 ether) {
+    function forceChangeOwner(address _newOwner) payable public costs(50 ether) {
         owner = _newOwner;
     }
 
